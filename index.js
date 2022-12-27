@@ -4,7 +4,7 @@ const authentication = require('./controllers/authenticationController');
 
 
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
@@ -14,6 +14,6 @@ app.get('/',(req,res)=>{
 });
 app.use('/auth',authentication);
 
-app.listen(port,()=>{
+app.listen(PORT,()=>{
     console.log('listening on port 8000');
 })
